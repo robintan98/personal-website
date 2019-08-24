@@ -1884,7 +1884,7 @@ input, select, textarea {
 		
 		.rowbox-left .description h1{
 			width:300px;
-			font-size: 140%;
+			font-size: 1.40em;
 			font-family: monaco;
 			text-align: left;
 			line-height: normal;
@@ -1896,7 +1896,7 @@ input, select, textarea {
 		
 		.rowbox-left .description h2{
 			width:300px;
-			font-size: 75%;
+			font-size: 0.75em;
 			font-family: monaco;
 			text-align: left;
 			width: 75%;
@@ -1908,7 +1908,7 @@ input, select, textarea {
 		
 		.rowbox-left .description h3{
 			width:300px;
-			font-size: 90%;
+			font-size: 0.9em;
 			font-family: monaco;
 			text-align: left;
 			line-height: normal;
@@ -1922,7 +1922,7 @@ input, select, textarea {
 		
 		.rowbox-left .description h4{
 			width:300px;
-			font-size: 70%;
+			font-size: 0.7em;
 			font-family: monaco;
 			text-align: left;
 			line-height: normal;
