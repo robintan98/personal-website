@@ -1601,10 +1601,22 @@ input, select, textarea {
 		border: 0;
 	}
 
+/* Long Image */
+
+	.image-long {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 45%;
+	}
+
 /* Image */
 
 	.image {
-		display: inline-block;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 30%;
 	}
 
 		.image img {
@@ -1855,8 +1867,8 @@ input, select, textarea {
 		border-radius: 0.5em;
 		border: 2px solid;
 		border-color: #d9d9d9;
-		padding: 0 1.5em 0 1.5em;
-		height: 14em;
+		padding: 1em 1.5em 1em 1.5em;
+		min-height: 14em;
 	}
 
 		.rowbox-left .description img {
@@ -1865,19 +1877,18 @@ input, select, textarea {
 			left: 1em;
 			top: 50%;
 			transform: translateY(-50%);
-			height: 12em;
+			height: 90%;
 			width: 23%;
 			border-radius: 0.5em;
 		}
 		
 		.rowbox-left .description h1{
 			width:300px;
-			font-size: 1.4em;
+			font-size: 140%;
 			font-family: monaco;
 			text-align: left;
 			line-height: normal;
 			width: 75%;
-			padding-top: 0.75em;
 			padding-bottom: 0;
 			margin-left: auto;
 			word-wrap: break-word;
@@ -1885,7 +1896,7 @@ input, select, textarea {
 		
 		.rowbox-left .description h2{
 			width:300px;
-			font-size: 0.75em;
+			font-size: 75%;
 			font-family: monaco;
 			text-align: left;
 			width: 75%;
@@ -1897,7 +1908,7 @@ input, select, textarea {
 		
 		.rowbox-left .description h3{
 			width:300px;
-			font-size: 0.9em;
+			font-size: 90%;
 			font-family: monaco;
 			text-align: left;
 			line-height: normal;
@@ -1911,7 +1922,7 @@ input, select, textarea {
 		
 		.rowbox-left .description h4{
 			width:300px;
-			font-size: 0.7em;
+			font-size: 70%;
 			font-family: monaco;
 			text-align: left;
 			line-height: normal;
@@ -1947,8 +1958,8 @@ input, select, textarea {
 		border-radius: 0.5em;
 		border: 2px solid;
 		border-color: #d9d9d9;
-		padding: 0 1.5em 0 1.5em;
-		height: 14em;
+		padding: 1em 1.5em 1em 1.5em;
+		min-height: 14em;
 	}
 
 		.rowbox-right .description img {
@@ -1957,7 +1968,7 @@ input, select, textarea {
 			right: 1em;
 			top: 50%;
 			transform: translateY(-50%);
-			height: 12em;
+			height: 90%;
 			width: 23%;
 			border-radius: 0.5em;
 		}
@@ -1969,7 +1980,6 @@ input, select, textarea {
 			text-align: left;
 			line-height: normal;
 			width: 75%;
-			padding-top: 0.75em;
 			padding-bottom: 0;
 			margin-right: auto;
 			word-wrap: break-word;
