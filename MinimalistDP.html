@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!--
+	The Daily Pennsylvanian Web Development Team Technical Challenge
+	@Robin Tan, September 2019
+-->
+<html>
+
+	<head>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico?"> -->
+		<title>Minimalist DP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/mainDP.css" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	</head>
+	
+	<body class="homepage" data-aos="fade-down">	
+		<div id="page-wrapper">
+
+			<!-- Body -->
+				<section id="body" class="wrapper pagestyle">
+					
+					<div class="container">
+					
+						<br><br><br>
+						
+						<a href="https://www.thedp.com" target = "_blank"><img class = "image-logo" src="images/dp-logo.png" data-aos="fade-in" data-aos-duration="2500"></a>
+						
+						<br><br><br>
+						
+						<!-- Nav -->
+						<section>
+							<nav id="nav" data-aos="fade-in" data-aos-duration="2500">
+								<ul style>
+									<li><a href="#top10">Go To Top 10 DP Articles</a></li>
+								</ul>
+							</nav>
+						</section>
+						
+						<br><br><br><br><br><br><br><br><br>				
+						
+						<div id="top10"></div> 
+						
+						<section type="container">
+						
+							<header class="style1" data-aos="fade-in" data-aos-duration="2500">
+								<h2 style="color:#fff">Top 10 DP Articles</h2>
+							</header>
+							
+							<div id="leftbox0"></div>
+							<div id="rightbox1"></div>
+							<div id="leftbox2"></div>
+							<div id="rightbox3"></div>
+							<div id="leftbox4"></div>
+							<div id="rightbox5"></div>
+							<div id="leftbox6"></div>
+							<div id="rightbox7"></div>
+							<div id="leftbox8"></div>
+							<div id="rightbox9"></div>
+							
+						</section>
+					
+					</div>
+					
+				</section>	
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="main.js"></script>
+			<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+			<script> AOS.init();</script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+			<script>
+				$(document).ready(function() {
+					$.get("https://us-central1-web-services-dp.cloudfunctions.net/dropcap/DP", function(data, status) {
+						console.log(data);
+						for (var i = 0; i < 10; i++) {
+							if (i % 2 == 0) {
+								$("#leftbox" + i).append('<div class="rowbox-left" data-aos="fade-right" data-aos-duration="2500">'
+														+ '<section class="description">'
+														+ '<a href= "https://www.thedp.com' + data["result"][i]["path"] + '" target = "_blank">' 
+														+ '<img src="' + data["result"][i]["image"] + '"></a>'
+														+ '<h1>' + data["result"][i]["ogTitle"] + '</h1>'
+														+ '<hr>'
+														+ '<h2> Author(s): ' + data["result"][i]["authors"] + '</h2>'
+														+ '<h3> Views: ' + data["result"][i]["views"] + '</h3>'
+														+ '</section></div><br>');
+							} else {
+								$("#rightbox" + i).append('<div class="rowbox-right" data-aos="fade-left" data-aos-duration="2500">'
+														+ '<section class="description">'
+														+ '<a href= "https://www.thedp.com' + data["result"][i]["path"] + '" target = "_blank">' 
+														+ '<img src="' + data["result"][i]["image"] + '"></a>'
+														+ '<h1>' + data["result"][i]["ogTitle"] + '</h1>'
+														+ '<hr>'
+														+ '<h2> Author(s): ' + data["result"][i]["authors"] + '</h2>'
+														+ '<h3> Views: ' + data["result"][i]["views"] + '</h3>'
+														+ '</section></div><br>');
+							}
+						}
+					})
+				});
+			</script>
+			
+	</body>
+	
+</html>
